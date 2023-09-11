@@ -9,15 +9,15 @@ function App() {
 
       <AppContainer>
         <AppLista>
-          <AppListaItems>{listaServicosColunaEsquerda.map( (listaEsquerda) => (
+          <AppListaItems>{listaServicosColunaEsquerda.map((listaEsquerda) => (
             <Link to={`/${listaEsquerda.toLowerCase().replace(/\s+/g, '-')}`}><AppListaItem>{listaEsquerda}</AppListaItem></Link>
-          ) )}
+          ))}
           </AppListaItems>
         </AppLista>
         <AppLista>
-          <AppListaItems>{listaServicosColunaDireita.map( (listaDireita) => (
+          <AppListaItems>{listaServicosColunaDireita.map((listaDireita) => (
             <Link to={`/${listaDireita.toLowerCase().replace(/\s+/g, '-')}`}><AppListaItem>{listaDireita}</AppListaItem></Link>
-          ) )}
+          ))}
           </AppListaItems>
         </AppLista>
       </AppContainer>

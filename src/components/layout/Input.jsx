@@ -609,3 +609,148 @@ export const Nome4 = () => {
             />
     )
 }
+
+export const PeriodoApuracao = () => {
+    return (
+        <InputMask 
+            id='periodo-apuracao'
+            placeholder='Digite o período de apuração'
+        />
+    )
+}
+
+export const Sifrao = () => {
+    return (
+        <InputMask 
+            id='sifrao'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao2 = () => {
+    return (
+        <InputMask 
+            id='sifrao2'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao3 = () => {
+    return (
+        <InputMask 
+            id='sifrao3'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao4 = () => {
+    return (
+        <InputMask 
+            id='sifrao4'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao5 = () => {
+    return (
+        <InputMask 
+            id='sifrao5'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao6 = () => {
+    return (
+        <InputMask 
+            id='sifrao6'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao7 = () => {
+    return (
+        <InputMask 
+            id='sifrao7'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao8 = () => {
+    return (
+        <InputMask 
+            id='sifrao8'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao9 = () => {
+    return (
+        <InputMask 
+            id='sifrao9'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Sifrao10 = () => {
+    return (
+        <InputMask 
+            id='sifrao10'
+            type='number'
+            placeholder='R$'
+        />
+    )
+}
+
+export const Local = () => {
+    return (
+        <InputMask 
+            id='local'
+            placeholder='Digite o local'
+        />
+    )
+}
+
+export const AnexoReceitas = () => {
+    return (
+        <AreaTexto 
+            as='textarea' rows={2} id='anexo'
+            value={'- Os documentos fiscais comprobatórios das entradas  de mercadorias e serviços tomados referentes ao período; \n- As notas fiscais relativas às operações ou prestações realizadas eventualmente emitidas.'}
+        />
+    )
+}
+
+export const SolicitacaoRequerente = () => {
+    return (
+        <InputMask 
+            id='solicitacao'
+            value={'Cancelamento de débitos / ressarcimento MEI'}
+        />
+    )
+}
+
+export const RequerimentoCancelamento = () => {
+    return (
+        <InputMask 
+            id='cancelamento'
+            value={'Solicito o cancelamento de todos os débitos referentes ao MEI, e o ressarcimento dos débitos pagos, conforme lei complementar 118/2022'}
+        />
+    )
+}

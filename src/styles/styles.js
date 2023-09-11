@@ -103,7 +103,6 @@ export const AppListaItem = styled.p`
     padding: 1rem 1rem;
     &:hover {
         border-color: #0D4D63;
-        background-color: #E9E9E9;
     }
 `
 export const Titulo = styled.h1`
