@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Container, Titulo } from "../styles/styles"
-import FormularioFormCadastro from "../components/forms/FormularioFormCadastro"
+import FormularioFormCadastro from "../components/forms/formularioCadastro/FormularioFormCadastro"
 
 function FormularioCadastro() {
     return (

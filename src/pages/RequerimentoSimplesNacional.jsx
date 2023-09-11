@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Container, Titulo } from "../styles/styles"
-import FormularioSimplesNacional from "../components/forms/FormularioSimplesNacional"
+import FormularioSimplesNacional from "../components/forms/requerimentoSimplesNacional/FormularioSimplesNacional"
 
 function RequerimentoSimplesNacional() {
     return (

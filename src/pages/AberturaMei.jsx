@@ -1,4 +1,5 @@
-import FormularioAberturaMei from "../components/forms/FormularioAberturaMei"
+
+import FormularioAberturaMei from "../components/forms/atendimentoMeiAbertura/FormularioAberturaMei"
 import { Container, Titulo } from "../styles/styles"
 import { Link } from 'react-router-dom'
 

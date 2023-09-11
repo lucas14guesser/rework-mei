@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Container, Titulo } from "../styles/styles"
-import FormularioRessarcimentoValores from "../components/forms/FormularioRessarcimentoValores"
+import FormularioRessarcimentoValores from "../components/forms/requerimentoRessarcimentoValores/FormularioRessarcimentoValores"
 
 function RequerimentoRessarcimentoValores() {
     return (

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Titulo, Container} from "../styles/styles"
-import FormularioCadastroServico from "../components/forms/FormularioCadastroServico"
+import FormularioCadastroServico from "../components/forms/cadastroNotasServicos/FormularioCadastroServico"
 
 
 function CadastroServico() {
