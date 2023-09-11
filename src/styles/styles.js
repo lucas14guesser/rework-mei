@@ -152,6 +152,7 @@ export const FormCheckbox = styled.div`
 `
 export const InputCheckbox = styled.input`
     border-radius: 0.25em;
+    margin-right: .2rem
 `
 export const TextoCheckbox = styled.p`
 font-size: 1rem;
