@@ -80,7 +80,7 @@ function AssPdfReceitasBrutas() {
 
     const returnHome = () => {
         navigate("/")
-      }
+    }
 
     return (
         <>
