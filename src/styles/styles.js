@@ -362,3 +362,20 @@ export const AreaTexto = styled.textarea`
   border-radius: 0.25rem;
   margin: 1rem 0 1rem 0;
 `
+export const AssinaturaGovBr = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+`
+export const AssinaturaDigital = styled.p`
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+`
+export const AssinaturaLink = styled.a`
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`

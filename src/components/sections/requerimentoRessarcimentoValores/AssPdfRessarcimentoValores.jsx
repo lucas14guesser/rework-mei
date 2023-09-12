@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
 import { Document, Page, Text, View,  PDFViewer, Image } from '@react-pdf/renderer';
 import { ButtonCanvas, Canvas, CanvasAssinaturaTexto, CanvasContainer, Texto, PdfStyles, CanvasButtonContainer, ButtonReload, CanvasButtons } from "../../../styles/styles"
+import AssinaturaGov from "../../layout/AssinaturaGov";
+import ExplicacaoAssinatura from "../../layout/ExplicacaoAssinatura";
 
 const AssPdfRessarcimentoValores = () => {
     const canvasRef = useRef(null);
@@ -81,6 +83,7 @@ const AssPdfRessarcimentoValores = () => {
     return (
         <>
             <Texto>Assinatura</Texto>
+            <AssinaturaGov />
             <CanvasContainer>
                 <Canvas ref={canvasRef} />
                 <ButtonCanvas type='button' onClick={handleClearCanvas}>
@@ -165,6 +168,7 @@ const AssPdfRessarcimentoValores = () => {
                     </Document>
                 </PDFViewer>
             ) : null}
+            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

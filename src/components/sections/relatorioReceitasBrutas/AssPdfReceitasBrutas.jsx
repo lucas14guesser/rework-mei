@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react"
 import { ButtonCanvas, ButtonReload, Canvas, CanvasAssinaturaTexto, CanvasButtonContainer, CanvasButtons, CanvasContainer, PdfStyles, Assinaturas, Assinatura, AssinaturaButtons, AssinaturaCampoImagem, AssinaturaImagem, Texto } from "../../../styles/styles";
 import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/renderer';
 import SecaoAnexos from "./SecaoAnexos";
+import AssinaturaGov from "../../layout/AssinaturaGov";
+import ExplicacaoAssinatura from "../../layout/ExplicacaoAssinatura";
 
 function AssPdfReceitasBrutas() {
     const canvasRef = useRef(null);
@@ -85,6 +87,7 @@ function AssPdfReceitasBrutas() {
     return (
         <>
             <Texto>Assinatura</Texto>
+            <AssinaturaGov />
             <CanvasContainer>
                 <Canvas ref={canvasRef} />
                 <ButtonCanvas type='button' onClick={handleClearCanvas}>
@@ -170,6 +173,7 @@ function AssPdfReceitasBrutas() {
                     </Document>
                 </PDFViewer>
             ) : null}
+            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

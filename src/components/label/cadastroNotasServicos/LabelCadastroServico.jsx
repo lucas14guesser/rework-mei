@@ -4,6 +4,8 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import { Texto, FormCheckbox, TextoCheckbox, PdfStyles, CanvasContainer, Canvas, ButtonCanvas, CanvasAssinaturaTexto, InputCheckbox, CanvasButtons, CanvasButtonContainer, ButtonReload, LabelRadio } from "../../../styles/styles";
 import SecaoCadastroServico from "../../sections/cadastroNotasServicos/SectionCadServ";
 import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao";
+import AssinaturaGov from "../../layout/AssinaturaGov";
+import ExplicacaoAssinatura from "../../layout/ExplicacaoAssinatura";
 
 const CadastroServico = () => {
     const canvasRef = useRef(null);
@@ -94,6 +96,7 @@ const CadastroServico = () => {
             </FormCheckbox>
             <LeiLgpd />
             <Texto>Assinatura</Texto>
+            <AssinaturaGov />
             <CanvasContainer>
                 <Canvas ref={canvasRef} />
                 <ButtonCanvas type='button' onClick={handleClearCanvas}>
@@ -129,6 +132,7 @@ const CadastroServico = () => {
                     </Document>
                 </PDFViewer>
             ) : null}
+            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

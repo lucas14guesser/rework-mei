@@ -7,6 +7,8 @@ import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
 import LeiLgpd from '../../texto/atendimentoMeiAbertura/TextoSolicitacao';
+import AssinaturaGov from '../../layout/AssinaturaGov';
+import ExplicacaoAssinatura from '../../layout/ExplicacaoAssinatura';
 
 const AssPdfAbertura = () => {
   const canvasRef = useRef(null);
@@ -109,6 +111,7 @@ const AssPdfAbertura = () => {
       </FormCheckbox>
       <LeiLgpd />
       <Texto>Assinatura</Texto>
+      <AssinaturaGov />
       <CanvasContainer>
         <Canvas ref={canvasRef} />
         <ButtonCanvas type='button' onClick={handleClearCanvas}>
@@ -195,6 +198,7 @@ const AssPdfAbertura = () => {
           </Document>
         </PDFViewer>
       ) : null}
+      <ExplicacaoAssinatura />
       <CanvasButtonContainer>
         <CanvasButtons onClick={returnHome}>
           <Link to='/'>Serviços</Link>
