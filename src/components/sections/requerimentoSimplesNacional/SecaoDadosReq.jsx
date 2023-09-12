@@ -1,7 +1,6 @@
 import { GlobalLabel } from "../../../styles/styles"
 import { Celular, Cpf, Data, DescricaoSimplesNacional, Nome, SolicitacaoSimplesNacional, Telefone } from "../../layout/Input"
-import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
-
+import LeiLgpd from "../../layout/LeiLgpd"
 
 const SecaoDadosReq = () => {
     return (

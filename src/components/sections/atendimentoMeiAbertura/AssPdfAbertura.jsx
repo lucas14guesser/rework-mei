@@ -6,9 +6,9 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
-import LeiLgpd from '../../texto/atendimentoMeiAbertura/TextoSolicitacao';
 import AssinaturaGov from '../../layout/AssinaturaGov';
 import ExplicacaoAssinatura from '../../layout/ExplicacaoAssinatura';
+import LeiLgpd from '../../layout/LeiLgpd';
 
 const AssPdfAbertura = () => {
   const canvasRef = useRef(null);
@@ -132,6 +132,7 @@ const AssPdfAbertura = () => {
         {selectedImage === 'dalize' && <AssinaturaImagem src={Dalize} />}
         {selectedImage === 'nelissa' && <AssinaturaImagem src={Nelissa} />}
       </AssinaturaCampoImagem>
+      <ExplicacaoAssinatura />
       {showPDF ? (
         <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
           <Document>
@@ -177,6 +178,8 @@ const AssPdfAbertura = () => {
                 <Text></Text>
                 <Text style={{ textDecoration: 'underline', marginTop: 10, marginBottom: 10 }}>Seguro Desemprego</Text>
                 <Text style={PdfStyles.text}>O Microempreendedor Individual não pode receber seguro-desemprego, porém, se ele trabalhar de carteira assinada e for demitido ele poderá receber se comprovar que o seu MEI não está gerando lucro suficiente para seu sustento e de seus dependentes.</Text>
+                <Text></Text>
+                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
                 <View style={PdfStyles.signatureContainer}>
                   <Image src={assinaturaBase64} style={PdfStyles.signature} />
                   <Text style={PdfStyles.signatureText}>ASSINATURA EMPREENDEDOR</Text>
@@ -198,7 +201,6 @@ const AssPdfAbertura = () => {
           </Document>
         </PDFViewer>
       ) : null}
-      <ExplicacaoAssinatura />
       <CanvasButtonContainer>
         <CanvasButtons onClick={returnHome}>
           <Link to='/'>Serviços</Link>

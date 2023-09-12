@@ -92,58 +92,59 @@ function AssinaturaPdfTermo() {
                 <input type='hidden' value={assinaturaBase64} id='assinatura' />
                 <CanvasAssinaturaTexto>Assinatura</CanvasAssinaturaTexto>
             </CanvasContainer>
-            {
-                showPDF ? (
-                    <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
-                        <Document>
-                            <Page size='A4' style={PdfStyles.page}>
-                                <View style={PdfStyles.section}>
-                                    <Text style={PdfStyles.text}>
-                                        Eu, abaixo assinado, declaro ciente de que as notificações, informações e tramitações referentes ao processo que agora protocolo serão encaminhados através do email constante no cadastro de sistema de protocolo.
-                                    </Text>
-                                    <Text></Text>
-                                    <Text style={PdfStyles.text}>
-                                        Declaro ciência de que posso consultar o andamento do processo através do sistema de consultas disponibilizado no site da prefeitura ao informar o número único.
-                                    </Text>
-                                    <Text></Text>
-                                    <Text style={PdfStyles.text}>
-                                        Declaro estar cientede que caso seja necessário a juntada de documentos, informações, ou quaisquer ações sob minha responsabilidade possuo o prazo de 90 (noventa) dias para emendar o processo, sob pena de arquivamento dos autos, sem prejuízo de abertura de novo processo, a meu critério e por minha iniciativa.
-                                    </Text>
-                                    <Text></Text>
-                                    <Text style={PdfStyles.text}>
-                                        Declaro que tenho ciência que a contagem dos prazos inicia-se após 10 (dez) dias do envio do email com a informação do parecer, contado o dia 01 o primeiro dia útil seguinte ao envio do email.
-                                    </Text>
-                                    <Text style={PdfStyles.smallText}>
-                                        Bem como me responsabilizo por informar qualquer alteração no email cadastrado.
-                                    </Text>
-                                    <Text>Nome do Declarante</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('nome').value}</Text>
-                                    <Text style={{ marginTop: 10 }}>Documento de Identificação</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('documento').value}</Text>
-                                    <Text style={{ marginTop: 10 }}>CNPJ do Requerente (se for o caso)</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('cnpj').value}</Text>
-                                    <Text style={{ marginTop: 10 }}>Vínculo com o Requerente (se for o caso)</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('vinculo').value}</Text>
-                                    <Text style={{ marginTop: 10 }}>Telefone</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('celular').value}</Text>
-                                    <Text style={{ marginTop: 10 }}>E-mail</Text>
-                                    <Text></Text>
-                                    <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('email').value}</Text>
-                                    <View style={PdfStyles.signatureContainer}>
-                                        <Image src={assinaturaBase64} style={PdfStyles.signature} />
-                                        <Text style={PdfStyles.signatureText}>Assinatura</Text>
-                                    </View>
-                                </View>
-                            </Page>
-                        </Document>
-                    </PDFViewer>
-                ) : null}
             <ExplicacaoAssinatura />
+            {showPDF ? (
+                <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
+                    <Document>
+                        <Page size='A4' style={PdfStyles.page}>
+                            <View style={PdfStyles.section}>
+                                <Text style={PdfStyles.text}>
+                                    Eu, abaixo assinado, declaro ciente de que as notificações, informações e tramitações referentes ao processo que agora protocolo serão encaminhados através do email constante no cadastro de sistema de protocolo.
+                                </Text>
+                                <Text></Text>
+                                <Text style={PdfStyles.text}>
+                                    Declaro ciência de que posso consultar o andamento do processo através do sistema de consultas disponibilizado no site da prefeitura ao informar o número único.
+                                </Text>
+                                <Text></Text>
+                                <Text style={PdfStyles.text}>
+                                    Declaro estar cientede que caso seja necessário a juntada de documentos, informações, ou quaisquer ações sob minha responsabilidade possuo o prazo de 90 (noventa) dias para emendar o processo, sob pena de arquivamento dos autos, sem prejuízo de abertura de novo processo, a meu critério e por minha iniciativa.
+                                </Text>
+                                <Text></Text>
+                                <Text style={PdfStyles.text}>
+                                    Declaro que tenho ciência que a contagem dos prazos inicia-se após 10 (dez) dias do envio do email com a informação do parecer, contado o dia 01 o primeiro dia útil seguinte ao envio do email.
+                                </Text>
+                                <Text style={PdfStyles.smallText}>
+                                    Bem como me responsabilizo por informar qualquer alteração no email cadastrado.
+                                </Text>
+                                <Text>Nome do Declarante</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('nome').value}</Text>
+                                <Text style={{ marginTop: 10 }}>Documento de Identificação</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('documento').value}</Text>
+                                <Text style={{ marginTop: 10 }}>CNPJ do Requerente (se for o caso)</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('cnpj').value}</Text>
+                                <Text style={{ marginTop: 10 }}>Vínculo com o Requerente (se for o caso)</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('vinculo').value}</Text>
+                                <Text style={{ marginTop: 10 }}>Telefone</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('celular').value}</Text>
+                                <Text style={{ marginTop: 10 }}>E-mail</Text>
+                                <Text></Text>
+                                <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('email').value}</Text>
+                                <Text></Text>
+                                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
+                                <View style={PdfStyles.signatureContainer}>
+                                    <Image src={assinaturaBase64} style={PdfStyles.signature} />
+                                    <Text style={PdfStyles.signatureText}>Assinatura</Text>
+                                </View>
+                            </View>
+                        </Page>
+                    </Document>
+                </PDFViewer>
+            ) : null}
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

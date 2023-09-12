@@ -2,7 +2,7 @@ import TextoPadonizado from "../../texto/termoCienciaResponsabilidade/TextoPadro
 import TextoPequeno from "../../texto/termoCienciaResponsabilidade/TextoPequeno"
 import { Celular, Cnpj, DocumentoGeral, Email, Nome, Vinculo } from "../../layout/Input"
 import { GlobalLabel } from "../../../styles/styles"
-import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
+import LeiLgpd from "../../layout/LeiLgpd"
 
 function SecaoDeclaranteTermoCiencia() {
     return (

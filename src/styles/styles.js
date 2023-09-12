@@ -200,12 +200,13 @@ export const PdfStyles = StyleSheet.create({
   },
   text: {
     textAlign: 'justify',
-    marginBottom: 10
+    marginBottom: 10,
+    marginTop: 10,
   },
   smallText: {
     textAlign: 'center',
     fontSize: 13,
-    marginBottom: 50
+    marginBottom: 50,
   }
 });
 export const CanvasContainer = styled.div`

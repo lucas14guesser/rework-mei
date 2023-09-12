@@ -1,9 +1,9 @@
 import { GlobalLabel } from "../../../styles/styles"
 import { Celular, Cnpj, Cpf, Descricao, Email, Nome } from "../../layout/Input"
+import LeiLgpd from "../../layout/LeiLgpd"
 import EnderecoSolicitacao from "./EnderecoSolicitacao"
 import HorarioSolicitacao from "./HorarioSolicitacao"
 import OpcoesSolicitacao from "./OpcoesSolicitacao"
-import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 const SecaoEmpreendedorSolicitacao = () => {
     return (

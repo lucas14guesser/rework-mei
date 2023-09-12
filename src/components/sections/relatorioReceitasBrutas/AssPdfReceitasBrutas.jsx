@@ -97,6 +97,7 @@ function AssPdfReceitasBrutas() {
                 <CanvasAssinaturaTexto>Requerente</CanvasAssinaturaTexto>
             </CanvasContainer>
             <SecaoAnexos />
+            <ExplicacaoAssinatura />
             {showPDF ? (
                 <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
                     <Document>
@@ -164,6 +165,8 @@ function AssPdfReceitasBrutas() {
                                 <Text style={PdfStyles.text}>
                                     - As notas fiscais relativas às operações ou prestações realizadas eventualmente emitidas.
                                 </Text>
+                                <Text></Text>
+                                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
                                 <View style={PdfStyles.signatureContainer}>
                                     <Image src={assinaturaBase64} style={PdfStyles.signature} />
                                     <Text style={PdfStyles.signatureText}>ASSINATURA DO EMPRESÁRIO</Text>
@@ -173,7 +176,6 @@ function AssPdfReceitasBrutas() {
                     </Document>
                 </PDFViewer>
             ) : null}
-            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>
