@@ -20,7 +20,7 @@ export const Nome = () => {
             maskChar=''
             placeholder='Digite o nome'
             formatChars={{
-                '*': '[A-Za-z ]' 
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
               }}
             />
     )
@@ -177,7 +177,7 @@ export const Nome2 = () => {
             maskChar=''
             placeholder='Digite o nome'
             formatChars={{
-                '*': '[A-Za-z ]' 
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
               }}
             />
     )
@@ -316,7 +316,7 @@ export const Cidade = () => {
             mask='****************************************************************************************************'
             maskChar=''
             formatChars={{
-                '*': '[A-Za-z ]'
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
             }}
             placeholder='Digite a cidade onde reside'
         />
@@ -463,7 +463,7 @@ export const Nome3 = () => {
             maskChar=''
             placeholder='Digite o nome'
             formatChars={{
-                '*': '[A-Za-z ]' 
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
               }}
             />
     )
@@ -499,7 +499,7 @@ export const Cidade2 = () => {
             mask='****************************************************************************************************'
             maskChar=''
             formatChars={{
-                '*': '[A-Za-z ]'
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
             }}
             placeholder='Digite a cidade onde reside'
         />
@@ -604,7 +604,7 @@ export const Nome4 = () => {
             maskChar=''
             placeholder='Digite o nome'
             formatChars={{
-                '*': '[A-Za-z ]' 
+                '*': '[A-Za-zÁáÉéÍíÓóÚúÃãÕõÂãÊêÎîÔôÛû ]' 
               }}
             />
     )
