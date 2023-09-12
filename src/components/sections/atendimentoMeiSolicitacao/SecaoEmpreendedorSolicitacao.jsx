@@ -3,7 +3,7 @@ import { Celular, Cnpj, Cpf, Descricao, Email, Nome } from "../../layout/Input"
 import EnderecoSolicitacao from "./EnderecoSolicitacao"
 import HorarioSolicitacao from "./HorarioSolicitacao"
 import OpcoesSolicitacao from "./OpcoesSolicitacao"
-import TextoSolicitacao from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 const SecaoEmpreendedorSolicitacao = () => {
     return (
@@ -23,7 +23,7 @@ const SecaoEmpreendedorSolicitacao = () => {
             <OpcoesSolicitacao />
             <GlobalLabel>Descrição</GlobalLabel>
             <Descricao />
-            <TextoSolicitacao />
+            <LeiLgpd />
         </>
     )
 }

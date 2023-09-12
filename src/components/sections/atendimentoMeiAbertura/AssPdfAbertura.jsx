@@ -6,6 +6,7 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
+import LeiLgpd from '../../texto/atendimentoMeiAbertura/TextoSolicitacao';
 
 const AssPdfAbertura = () => {
   const canvasRef = useRef(null);
@@ -106,6 +107,7 @@ const AssPdfAbertura = () => {
         <InputCheckbox id='check' type="checkbox" onChange={handleSwitchChange} />
         <LabelRadio htmlFor="check">Declaro ter recebido as devidas orientações quanto ao sistema de emissão de notas do simples nacional.</LabelRadio>
       </FormCheckbox>
+      <LeiLgpd />
       <Texto>Assinatura</Texto>
       <CanvasContainer>
         <Canvas ref={canvasRef} />

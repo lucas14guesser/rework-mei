@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
 import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/renderer';
-import { Formulario, Texto, FormCheckbox, TextoCheckbox, PdfStyles, CanvasContainer, Canvas, ButtonCanvas, CanvasAssinaturaTexto, InputCheckbox, CanvasButtons, CanvasButtonContainer, ButtonReload, LabelRadio } from "../../../styles/styles";
+import { Texto, FormCheckbox, TextoCheckbox, PdfStyles, CanvasContainer, Canvas, ButtonCanvas, CanvasAssinaturaTexto, InputCheckbox, CanvasButtons, CanvasButtonContainer, ButtonReload, LabelRadio } from "../../../styles/styles";
 import SecaoCadastroServico from "../../sections/cadastroNotasServicos/SectionCadServ";
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao";
 
 const CadastroServico = () => {
     const canvasRef = useRef(null);
@@ -91,6 +92,7 @@ const CadastroServico = () => {
                 <InputCheckbox id='check' type="checkbox" onChange={handleSwitchChange} />
                 <LabelRadio htmlFor="check">Declaro ter recebido as devidas orientações quanto ao sistema de emissão de notas do simples nacional.</LabelRadio>
             </FormCheckbox>
+            <LeiLgpd />
             <Texto>Assinatura</Texto>
             <CanvasContainer>
                 <Canvas ref={canvasRef} />

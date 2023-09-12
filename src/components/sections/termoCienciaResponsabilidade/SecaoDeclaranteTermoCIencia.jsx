@@ -2,6 +2,7 @@ import TextoPadonizado from "../../texto/termoCienciaResponsabilidade/TextoPadro
 import TextoPequeno from "../../texto/termoCienciaResponsabilidade/TextoPequeno"
 import { Celular, Cnpj, DocumentoGeral, Email, Nome, Vinculo } from "../../layout/Input"
 import { GlobalLabel } from "../../../styles/styles"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 function SecaoDeclaranteTermoCiencia() {
     return (
@@ -20,6 +21,7 @@ function SecaoDeclaranteTermoCiencia() {
             <Celular />
             <GlobalLabel>E-mail</GlobalLabel>
             <Email />
+            <LeiLgpd />
         </>
     )
 } export default SecaoDeclaranteTermoCiencia

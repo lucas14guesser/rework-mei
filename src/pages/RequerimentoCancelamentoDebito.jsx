@@ -5,7 +5,7 @@ import LabelCancelamentoDebito from "../components/label/requerimentoCancelament
 function RequerimentoCancelamenteDebito() {
     return (
         <>
-        <Titulo>Requerimento - Cancelamento de débitos / Ressarcimento Mei</Titulo>
+        <Titulo>Requerimento - Cancelamento de débitos</Titulo>
         <Container>
             <Link to='/'>Voltar para os serviços</Link>
             <LabelCancelamentoDebito />

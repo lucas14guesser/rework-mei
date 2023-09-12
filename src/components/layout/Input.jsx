@@ -156,7 +156,7 @@ export const SolicitacaoRessarcimentoValores = () => {
     return (
         <InputMask 
             id='solicitacao'
-            value='Perguntar para a Raquel o que escrever aqui porque eu joguei as folhas que ela me deu no lixo'
+            value='Ressarcimento de valores'
         />
     )
 }
@@ -165,7 +165,7 @@ export const DescricaoRessarcimentoValores = () => {
     return (
         <InputMask 
             id='requerimento'
-            value='Perguntar para a Raquel o que escrever aqui porque eu joguei as folhas que ela me deu no lixo'
+            value='Solicito o ressarcimento dos débitos pagos, conforme lei complementar 118/2022'
         />
     )
 }
@@ -741,7 +741,7 @@ export const SolicitacaoRequerente = () => {
     return (
         <InputMask 
             id='solicitacao'
-            value={'Cancelamento de débitos / ressarcimento MEI'}
+            value={'Cancelamento de débitos'}
         />
     )
 }
@@ -750,7 +750,7 @@ export const RequerimentoCancelamento = () => {
     return (
         <InputMask 
             id='cancelamento'
-            value={'Solicito o cancelamento de todos os débitos referentes ao MEI, e o ressarcimento dos débitos pagos, conforme lei complementar 118/2022'}
+            value={'Solicito o cancelamento de todos os débitos referentes ao MEI, conforme lei complementar 118/2022'}
         />
     )
 }

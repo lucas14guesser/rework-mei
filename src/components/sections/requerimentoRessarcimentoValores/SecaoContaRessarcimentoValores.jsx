@@ -1,6 +1,8 @@
 import ContaRadioCheck from "../../check/requerimentoRessarcimentoValores/ContaRadioCheck"
 import { Agencia, Banco, Cnpj2, Conta, ContaCnpj, ContaCpf, ContaTerceiro, Cpf2, Data, Nome2, Operacao } from "../../layout/Input"
 import { GlobalLabel, TextoPadrao } from "../../../styles/styles"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
+
 
 const SecaoContaRessarcimentoValores = () => {
     return (
@@ -32,6 +34,7 @@ const SecaoContaRessarcimentoValores = () => {
             <TextoPadrao>Observação: Deve ser anexado cópia original do cartão ou outro documento oficial que confirme os dados bancários, para ressarcimento no processo</TextoPadrao>
             <GlobalLabel>Data</GlobalLabel>
             <Data />
+            <LeiLgpd />
         </>
     )
 }

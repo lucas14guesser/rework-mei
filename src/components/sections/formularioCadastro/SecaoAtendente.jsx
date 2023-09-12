@@ -1,5 +1,6 @@
 import { GlobalLabel, RadioCheckbox, TextoPadrao, TextoTermos } from "../../../styles/styles"
 import { CaixaTexto, Data2, IdentificarTributos, Nome4, NumeroAcordo, NumeroParcelaAutorizada, Parcelamento, RadioFormCadastro2, RadioFormCadastro3 } from "../../layout/Input"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 function SecaoAtendente() {
     return (
@@ -27,6 +28,7 @@ function SecaoAtendente() {
         <TextoPadrao>(as dívidas que já foram parceladas por duas vezes não podem ser objeto de um terceiro parcelamento - art 73 da lc 021/2005)</TextoPadrao>
         <GlobalLabel>Nome do atendente</GlobalLabel>
         <Nome4 />
+        <LeiLgpd />
         </>
     )
 } export default SecaoAtendente

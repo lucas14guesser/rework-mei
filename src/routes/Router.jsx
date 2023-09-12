@@ -19,12 +19,12 @@ function Router() {
             <Route path="/termo-de-ciência-e-responsabilidade" element={<TermoCienciaResponsabilidade />} />
             <Route path="/atendimento-mei-abertura" element={<AberturaMei />} />
             <Route path="/requerimento-simples-nacional" element={<RequerimentoSimplesNacional />} />
-            <Route path="/requerimento-ressarcimento-valores" element={<RequerimentoRessarcimentoValores />} />
+            <Route path="/requerimento-ressarcimento-de-valores" element={<RequerimentoRessarcimentoValores />} />
             <Route path="/atendimento-mei-solicitação" element={<SolicitacaoMei />} />
             <Route path="/formulário-de-cadastro" element={<FormularioCadastro />} />
             <Route path="/relatório-mensal-das-receitas-brutas" element={<ReceitasBrutas />} />
-            <Route path="/requerimento-cancelamento-débito" element={<RequerimentoCancelamenteDebito />} />
-            <Route path="/requerimento-criar-do-zero" element={<CriarRequerimento />} />
+            <Route path="/requerimento-cancelamento-de-débitos" element={<RequerimentoCancelamenteDebito />} />
+            <Route path="/criar-requerimento" element={<CriarRequerimento />} />
         </Routes>
     )
 } export default Router
