@@ -406,7 +406,7 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15rem
+    margin-bottom: 14.8rem
 `,yye=Jt.h1`
     font-size: 2.5rem;
     text-align: center;

@@ -72,7 +72,7 @@ export const AppContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15rem
+    margin-bottom: 14.8rem
 `
 export const AppTitulo = styled.h1`
     font-size: 2.5rem;
