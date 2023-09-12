@@ -754,3 +754,21 @@ export const RequerimentoCancelamento = () => {
         />
     )
 }
+
+export const Solicitacao = () => {
+    return (
+        <InputMask 
+            id='solicitacao'
+            placeholder='Digite o título do requerimento'
+        />
+    )
+}
+
+export const Requerimento = () => {
+    return (
+        <InputMask 
+            id='requerimento'
+            placeholder='Digite sobre o que se trata o requerimento'
+        />
+    )
+}

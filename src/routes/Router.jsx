@@ -9,6 +9,7 @@ import SolicitacaoMei from "../pages/SolicitacaoMei"
 import FormularioCadastro from "../pages/FormularioCadastro"
 import ReceitasBrutas from "../pages/ReceitasBrutas"
 import RequerimentoCancelamenteDebito from "../pages/RequerimentoCancelamentoDebito"
+import CriarRequerimento from "../pages/CriarRequerimento"
 
 function Router() {
     return (
@@ -23,6 +24,7 @@ function Router() {
             <Route path="/formulário-de-cadastro" element={<FormularioCadastro />} />
             <Route path="/relatório-mensal-das-receitas-brutas" element={<ReceitasBrutas />} />
             <Route path="/requerimento-cancelamento-débito" element={<RequerimentoCancelamenteDebito />} />
+            <Route path="/requerimento-criar-do-zero" element={<CriarRequerimento />} />
         </Routes>
     )
 } export default Router
