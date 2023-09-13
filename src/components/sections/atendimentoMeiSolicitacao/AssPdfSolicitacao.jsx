@@ -1,7 +1,7 @@
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
-import Laizy from '../../../assets/assinatura-laizy.png'
+import Laisy from '../../../assets/assinatura-laisy.png'
 import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/renderer';
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
@@ -97,8 +97,8 @@ const AssPdfSolicitacao = () => {
         setSelectedImage('nelissa');
     };
 
-    const handleClickLaizy = () => {
-        setSelectedImage('laizy');
+    const handleClickLaisy = () => {
+        setSelectedImage('laisy');
     };
 
     return (
@@ -117,14 +117,14 @@ const AssPdfSolicitacao = () => {
                 <Assinatura>
                     <AssinaturaButtons type="button" onClick={handleClickRaquel}>Assinatura Raquel</AssinaturaButtons>
                     <AssinaturaButtons type="button" onClick={handleClickDalize}>Assinatura Dalize</AssinaturaButtons>
-                    <AssinaturaButtons type="button" onClick={handleClickLaizy}>Assinatura Laizy</AssinaturaButtons>
+                    <AssinaturaButtons type="button" onClick={handleClickLaisy}>Assinatura Laisy</AssinaturaButtons>
                     <AssinaturaButtons type="button" onClick={handleClickNelissa}>Assinatura Nelissa</AssinaturaButtons>
                 </Assinatura>
             </Assinaturas>
             <AssinaturaCampoImagem>
                 {selectedImage === 'raquel' && <AssinaturaImagem src={Raquel} />}
                 {selectedImage === 'dalize' && <AssinaturaImagem src={Dalize} />}
-                {selectedImage === 'laizy' && <AssinaturaImagem src={Laizy} />}
+                {selectedImage === 'laisy' && <AssinaturaImagem src={Laisy} />}
                 {selectedImage === 'nelissa' && <AssinaturaImagem src={Nelissa} />}
             </AssinaturaCampoImagem>
             {showPDF ? (
@@ -196,8 +196,8 @@ const AssPdfSolicitacao = () => {
                                     {selectedImage === 'dalize' && (
                                         <Image src={Dalize} style={PdfStyles.signaturedefaul} />
                                     )}
-                                    {selectedImage === 'laizy' && (
-                                        <Image src={Laizy} style={PdfStyles.signaturedefaul} />
+                                    {selectedImage === 'laisy' && (
+                                        <Image src={Laisy} style={PdfStyles.signaturedefaul} />
                                     )}
                                     {selectedImage === 'nelissa' && (
                                         <Image src={Nelissa} style={PdfStyles.signaturedefaul} />

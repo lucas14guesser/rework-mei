@@ -6,7 +6,7 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
-import Laisy from '../../../assets/assinatura-laizy.png'
+import Laisy from '../../../assets/assinatura-laisy.png'
 import LeiLgpd from '../../texto/atendimentoMeiAbertura/TextoSolicitacao';
 import AssinaturaGov from '../../layout/AssinaturaGov';
 import ExplicacaoAssinatura from '../../layout/ExplicacaoAssinatura';
@@ -104,8 +104,8 @@ const AssPdfAbertura = () => {
     setSelectedImage('nelissa');
   };
 
-  const handleClickLaizy = () => {
-    setSelectedImage('laizy');
+  const handleClickLaisy = () => {
+    setSelectedImage('laisy');
   };
 
   return (
@@ -129,14 +129,14 @@ const AssPdfAbertura = () => {
         <Assinatura>
           <AssinaturaButtons type="button" onClick={handleClickRaquel}>Assinatura Raquel</AssinaturaButtons>
           <AssinaturaButtons type="button" onClick={handleClickDalize}>Assinatura Dalize</AssinaturaButtons>
-          <AssinaturaButtons type="button" onClick={handleClickLaizy}>Assinatura Laízy</AssinaturaButtons>
+          <AssinaturaButtons type="button" onClick={handleClickLaisy}>Assinatura Laísy</AssinaturaButtons>
           <AssinaturaButtons type="button" onClick={handleClickNelissa}>Assinatura Nelissa</AssinaturaButtons>
         </Assinatura>
       </Assinaturas>
       <AssinaturaCampoImagem>
         {selectedImage === 'raquel' && <AssinaturaImagem src={Raquel} />}
         {selectedImage === 'dalize' && <AssinaturaImagem src={Dalize} />}
-        {selectedImage === 'laizy' && <AssinaturaImagem src={Laisy} />}
+        {selectedImage === 'laisy' && <AssinaturaImagem src={Laisy} />}
         {selectedImage === 'nelissa' && <AssinaturaImagem src={Nelissa} />}
       </AssinaturaCampoImagem>
       {showPDF ? (
@@ -195,7 +195,7 @@ const AssPdfAbertura = () => {
                   {selectedImage === 'dalize' && (
                     <Image src={Dalize} style={PdfStyles.signaturedefaul} />
                   )}
-                  {selectedImage === 'laizy' && (
+                  {selectedImage === 'laisy' && (
                     <Image src={Laisy} style={PdfStyles.signaturedefaul} />
                   )}
                   {selectedImage === 'nelissa' && (
