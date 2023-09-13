@@ -5,6 +5,7 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
+import Laizy from '../../../assets/assinatura-laizy.png'
 import AssinaturaGov from "../../layout/AssinaturaGov";
 import ExplicacaoAssinatura from "../../layout/ExplicacaoAssinatura";
 
@@ -52,6 +53,10 @@ function AssinaturaPdf() {
 
     const handleClickNelissa = () => {
         setSelectedImage('nelissa');
+    };
+
+    const handleClickLaizy = () => {
+        setSelectedImage('laizy');
     };
 
     useEffect(() => {
@@ -117,15 +122,16 @@ function AssinaturaPdf() {
                 <Assinatura>
                     <AssinaturaButtons type="button" onClick={handleClickRaquel}>Assinatura Raquel</AssinaturaButtons>
                     <AssinaturaButtons type="button" onClick={handleClickDalize}>Assinatura Dalize</AssinaturaButtons>
+                    <AssinaturaButtons type="button" onClick={handleClickLaizy}>Assinatura Laizy</AssinaturaButtons>
                     <AssinaturaButtons type="button" onClick={handleClickNelissa}>Assinatura Nelissa</AssinaturaButtons>
                 </Assinatura>
             </Assinaturas>
             <AssinaturaCampoImagem>
                 {selectedImage === 'raquel' && <AssinaturaImagem src={Raquel} />}
                 {selectedImage === 'dalize' && <AssinaturaImagem src={Dalize} />}
+                {selectedImage === 'laizy' && <AssinaturaImagem src={Laizy} />}
                 {selectedImage === 'nelissa' && <AssinaturaImagem src={Nelissa} />}
             </AssinaturaCampoImagem>
-            <ExplicacaoAssinatura />
             {showPDF ? (
                 <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
                     <Document>
@@ -226,8 +232,6 @@ function AssinaturaPdf() {
                                 <Text style={{ marginTop: 10 }}>Nome do Atendente</Text>
                                 <Text></Text>
                                 <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('nome4').value}</Text>
-                                <Text></Text>
-                                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
                                 <View style={PdfStyles.signatureContainer}>
                                     <Image src={assinaturaBase64} style={PdfStyles.signature} />
                                     <Text style={PdfStyles.signatureText}>Assinatura do Requerente</Text>
@@ -239,6 +243,9 @@ function AssinaturaPdf() {
                                     {selectedImage === 'dalize' && (
                                         <Image src={Dalize} style={PdfStyles.signaturedefaul} />
                                     )}
+                                    {selectedImage === 'laizy' && (
+                                        <Image src={Laizy} style={PdfStyles.signaturedefaul} />
+                                    )}
                                     {selectedImage === 'nelissa' && (
                                         <Image src={Nelissa} style={PdfStyles.signaturedefaul} />
                                     )}
@@ -249,6 +256,7 @@ function AssinaturaPdf() {
                     </Document>
                 </PDFViewer>
             ) : null}
+            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

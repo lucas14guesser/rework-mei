@@ -1,6 +1,6 @@
 import { GlobalLabel, Subtitulo } from "../../../styles/styles"
 import { Data, Local, Sifrao10, Sifrao7, Sifrao8, Sifrao9 } from "../../layout/Input"
-import LeiLgpd from "../../layout/LeiLgpd"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 function SecaoPrestacaoServicos() {
     return (

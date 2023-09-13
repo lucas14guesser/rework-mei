@@ -1,7 +1,8 @@
 import ContaRadioCheck from "../../check/requerimentoRessarcimentoValores/ContaRadioCheck"
 import { Agencia, Banco, Cnpj2, Conta, ContaCnpj, ContaCpf, ContaTerceiro, Cpf2, Data, Nome2, Operacao } from "../../layout/Input"
 import { GlobalLabel, TextoPadrao } from "../../../styles/styles"
-import LeiLgpd from "../../layout/LeiLgpd"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
+
 
 const SecaoContaRessarcimentoValores = () => {
     return (

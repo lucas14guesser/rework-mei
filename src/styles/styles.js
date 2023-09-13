@@ -72,7 +72,7 @@ export const AppContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 14.8rem
+    margin-bottom: 10rem
 `
 export const AppTitulo = styled.h1`
     font-size: 2.5rem;
@@ -200,13 +200,12 @@ export const PdfStyles = StyleSheet.create({
   },
   text: {
     textAlign: 'justify',
-    marginBottom: 10,
-    marginTop: 10,
+    marginBottom: 10
   },
   smallText: {
     textAlign: 'center',
     fontSize: 13,
-    marginBottom: 50,
+    marginBottom: 50
   }
 });
 export const CanvasContainer = styled.div`
@@ -333,8 +332,8 @@ export const AssinaturaCampoImagem = styled.div`
   justify-content: center;
 `
 export const AssinaturaImagem = styled.img`
-  max-height: 300px;
-  max-width: 500px;
+  max-height: 230px;
+  max-width: 375px;
   margin-bottom: 1rem;
 `
 export const Horario = styled.div`

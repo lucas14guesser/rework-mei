@@ -92,7 +92,6 @@ function AssPdfCriacaoReq() {
                 <input type='hidden' value={assinaturaBase64} id='assinatura' />
                 <CanvasAssinaturaTexto>Requerente</CanvasAssinaturaTexto>
             </CanvasContainer>
-            <ExplicacaoAssinatura />
             {showPDF ? (
                 <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
                     <Document>
@@ -119,8 +118,6 @@ function AssPdfCriacaoReq() {
                                 <Text style={{ marginTop: 10 }}>Data</Text>
                                 <Text></Text>
                                 <Text style={{ marginTop: 5, marginLeft: 10 }}>{document.getElementById('data').value}</Text>
-                                <Text></Text>
-                                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
                                 <View style={PdfStyles.signatureContainer}>
                                     <Image src={assinaturaBase64} style={PdfStyles.signature} />
                                     <Text style={PdfStyles.signatureText}>REQUERENTE</Text>
@@ -130,6 +127,7 @@ function AssPdfCriacaoReq() {
                     </Document>
                 </PDFViewer>
             ) : null}
+            <ExplicacaoAssinatura />
             <CanvasButtonContainer>
                 <CanvasButtons onClick={returnHome}>
                     <Link to='/'>Serviços</Link>

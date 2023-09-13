@@ -1,6 +1,6 @@
 import { GlobalLabel, RadioCheckbox, TextoPadrao, TextoTermos } from "../../../styles/styles"
 import { CaixaTexto, Data2, IdentificarTributos, Nome4, NumeroAcordo, NumeroParcelaAutorizada, Parcelamento, RadioFormCadastro2, RadioFormCadastro3 } from "../../layout/Input"
-import LeiLgpd from "../../layout/LeiLgpd"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 function SecaoAtendente() {
     return (

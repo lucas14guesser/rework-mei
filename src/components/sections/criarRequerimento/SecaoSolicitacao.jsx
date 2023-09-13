@@ -1,6 +1,6 @@
 import { GlobalLabel } from "../../../styles/styles"
 import { Data, Requerimento, Solicitacao } from "../../layout/Input"
-import LeiLgpd from "../../layout/LeiLgpd"
+import LeiLgpd from "../../texto/atendimentoMeiAbertura/TextoSolicitacao"
 
 function SecaoSolicitacao() {
     return (

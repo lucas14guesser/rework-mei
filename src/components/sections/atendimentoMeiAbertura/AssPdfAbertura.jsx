@@ -6,9 +6,10 @@ import { Document, Page, Text, View, PDFViewer, Image } from '@react-pdf/rendere
 import Dalize from '../../../assets/assinatura-dalize.png'
 import Raquel from '../../../assets/assinatura-raquel.png'
 import Nelissa from '../../../assets/assinatura-nelissa.png'
+import Laisy from '../../../assets/assinatura-laizy.png'
+import LeiLgpd from '../../texto/atendimentoMeiAbertura/TextoSolicitacao';
 import AssinaturaGov from '../../layout/AssinaturaGov';
 import ExplicacaoAssinatura from '../../layout/ExplicacaoAssinatura';
-import LeiLgpd from '../../layout/LeiLgpd';
 
 const AssPdfAbertura = () => {
   const canvasRef = useRef(null);
@@ -20,87 +21,91 @@ const AssPdfAbertura = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-      const canvas = canvasRef.current;
-      const ctx = canvas.getContext('2d');
-      let isDrawing = false;
-      let lastX = 0;
-      let lastY = 0;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
 
-      const resizeCanvas = () => {
-          canvas.width = canvas.offsetWidth;
-          canvas.height = canvas.offsetHeight;
-      };
+    const resizeCanvas = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
 
-      const startDrawing = (e) => {
-          isDrawing = true;
-          [lastX, lastY] = [e.offsetX, e.offsetY];
-      };
+    const startDrawing = (e) => {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    };
 
-      const stopDrawing = () => {
-          isDrawing = false;
-      };
+    const stopDrawing = () => {
+      isDrawing = false;
+    };
 
-      const draw = (e) => {
-          if (!isDrawing) return;
+    const draw = (e) => {
+      if (!isDrawing) return;
 
-          ctx.beginPath();
-          ctx.moveTo(lastX, lastY);
-          ctx.lineTo(e.offsetX, e.offsetY);
-          ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
 
-          [lastX, lastY] = [e.offsetX, e.offsetY];
-      };
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    };
 
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-      canvas.addEventListener('mousedown', startDrawing);
-      canvas.addEventListener('mouseup', stopDrawing);
-      canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mousemove', draw);
 
-      return () => {
-          window.removeEventListener('resize', resizeCanvas);
-          canvas.removeEventListener('mousedown', startDrawing);
-          canvas.removeEventListener('mouseup', stopDrawing);
-          canvas.removeEventListener('mousemove', draw);
-      };
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      canvas.removeEventListener('mousedown', startDrawing);
+      canvas.removeEventListener('mouseup', stopDrawing);
+      canvas.removeEventListener('mousemove', draw);
+    };
   }, []);
 
   const handleClearCanvas = () => {
-      const canvas = canvasRef.current;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   };
 
   const handleSwitchChange = () => {
-      setIsSwitchOn(!isSwitchOn);
+    setIsSwitchOn(!isSwitchOn);
   };
 
   const handleReload = () => {
-      navigate(window.location.pathname)
+    navigate(window.location.pathname)
   }
 
   const handleGeneratePDF = () => {
-      const canvas = canvasRef.current;
-      const base64Image = canvas.toDataURL('image/png');
-      setAssinaturaBase64(base64Image);
-      setShowPDF(true);
+    const canvas = canvasRef.current;
+    const base64Image = canvas.toDataURL('image/png');
+    setAssinaturaBase64(base64Image);
+    setShowPDF(true);
   };
 
   const returnHome = () => {
-      navigate("/")
+    navigate("/")
   }
 
   const handleClickRaquel = () => {
-      setSelectedImage('raquel');
+    setSelectedImage('raquel');
   };
 
   const handleClickDalize = () => {
-      setSelectedImage('dalize');
+    setSelectedImage('dalize');
   };
 
   const handleClickNelissa = () => {
-      setSelectedImage('nelissa');
+    setSelectedImage('nelissa');
+  };
+
+  const handleClickLaizy = () => {
+    setSelectedImage('laizy');
   };
 
   return (
@@ -124,15 +129,16 @@ const AssPdfAbertura = () => {
         <Assinatura>
           <AssinaturaButtons type="button" onClick={handleClickRaquel}>Assinatura Raquel</AssinaturaButtons>
           <AssinaturaButtons type="button" onClick={handleClickDalize}>Assinatura Dalize</AssinaturaButtons>
+          <AssinaturaButtons type="button" onClick={handleClickLaizy}>Assinatura Laízy</AssinaturaButtons>
           <AssinaturaButtons type="button" onClick={handleClickNelissa}>Assinatura Nelissa</AssinaturaButtons>
         </Assinatura>
       </Assinaturas>
       <AssinaturaCampoImagem>
         {selectedImage === 'raquel' && <AssinaturaImagem src={Raquel} />}
         {selectedImage === 'dalize' && <AssinaturaImagem src={Dalize} />}
+        {selectedImage === 'laizy' && <AssinaturaImagem src={Laisy} />}
         {selectedImage === 'nelissa' && <AssinaturaImagem src={Nelissa} />}
       </AssinaturaCampoImagem>
-      <ExplicacaoAssinatura />
       {showPDF ? (
         <PDFViewer style={{ width: '100%', height: '700px' }} className='mb-3'>
           <Document>
@@ -178,8 +184,6 @@ const AssPdfAbertura = () => {
                 <Text></Text>
                 <Text style={{ textDecoration: 'underline', marginTop: 10, marginBottom: 10 }}>Seguro Desemprego</Text>
                 <Text style={PdfStyles.text}>O Microempreendedor Individual não pode receber seguro-desemprego, porém, se ele trabalhar de carteira assinada e for demitido ele poderá receber se comprovar que o seu MEI não está gerando lucro suficiente para seu sustento e de seus dependentes.</Text>
-                <Text></Text>
-                <Text style={PdfStyles.text}>Em observância à lei nº. 13.709/18-lei geral de proteção de dados pessoais e demais normativas aplicáveis sobre proteção de dados pessoais, manifesto-me de forma informada, livre, expressa e consciente, no sentido de autorizar o espaço do empreendedor de são josé sc a realizar o tratamento de meus dados pessoais para as finalidades e de acordo com as condições aqui estabelecidas.</Text>
                 <View style={PdfStyles.signatureContainer}>
                   <Image src={assinaturaBase64} style={PdfStyles.signature} />
                   <Text style={PdfStyles.signatureText}>ASSINATURA EMPREENDEDOR</Text>
@@ -191,6 +195,9 @@ const AssPdfAbertura = () => {
                   {selectedImage === 'dalize' && (
                     <Image src={Dalize} style={PdfStyles.signaturedefaul} />
                   )}
+                  {selectedImage === 'laizy' && (
+                    <Image src={Laisy} style={PdfStyles.signaturedefaul} />
+                  )}
                   {selectedImage === 'nelissa' && (
                     <Image src={Nelissa} style={PdfStyles.signaturedefaul} />
                   )}
@@ -201,6 +208,7 @@ const AssPdfAbertura = () => {
           </Document>
         </PDFViewer>
       ) : null}
+      <ExplicacaoAssinatura />
       <CanvasButtonContainer>
         <CanvasButtons onClick={returnHome}>
           <Link to='/'>Serviços</Link>
