@@ -68,6 +68,11 @@ export const GlobalStyles = createGlobalStyle`
         border-radius: 8px;
     } 
 `
+export const Logo = styled.img`
+    display: flex;
+    width: 130px;
+    margin: 4rem 0 4rem 4rem;
+`
 export const AppContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -77,7 +82,7 @@ export const AppContainer = styled.div`
 export const AppTitulo = styled.h1`
     font-size: 2.5rem;
     text-align: center;
-    margin: 8.67rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 `
 export const AppLista = styled.ul`
     display: flex;

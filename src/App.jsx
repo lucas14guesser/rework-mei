@@ -1,10 +1,12 @@
-import { AppContainer, AppTitulo, AppLista, AppListaItems, AppListaItem } from "./styles/styles"
+import { AppContainer, AppTitulo, AppLista, AppListaItems, AppListaItem, Logo } from "./styles/styles"
 import { listaServicosColunaEsquerda, listaServicosColunaDireita } from "./services/Functions"
 import { Link } from "react-router-dom"
+import Header from "./components/layout/Header"
 
 function App() {
   return (
     <>
+      <Header />
       <AppTitulo>Serviços de atendimento - MEI</AppTitulo>
 
       <AppContainer>
