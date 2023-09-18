@@ -485,7 +485,7 @@ text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: flex-start
-`,Fye=eM.create({page:{flexDirection:"row",backgroundColor:"#ffffff",padding:10},section:{margin:10,padding:10,flexGrow:1},signatureContainer:{marginTop:20,flexDirection:"column",alignItems:"center"},signatureText:{marginBottom:0,textAlign:"center"},signature:{width:"100%",height:200},imageContainer:{flex:1,display:"flex",justifyContent:"center",alignItems:"center"},signaturedefaul:{width:300,height:100,objectFit:"contain"},text:{textAlign:"justify",marginBottom:10},smallText:{textAlign:"center",fontSize:13,marginBottom:50}}),Oye=Jt.div`
+`,Fye=eM.create({page:{flexDirection:"row",backgroundColor:"#ffffff",padding:10},section:{margin:10,padding:10,flexGrow:1},signatureContainer:{marginTop:20,flexDirection:"column",alignItems:"center"},signatureText:{marginBottom:0,textAlign:"center"},signature:{width:"100%",height:200},imageContainer:{flex:1,display:"flex",justifyContent:"center",alignItems:"center"},signaturedefaul:{width:275,height:120,objectFit:"contain"},text:{textAlign:"justify",marginBottom:10},smallText:{textAlign:"center",fontSize:13,marginBottom:50}}),Oye=Jt.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -592,8 +592,10 @@ text-transform: uppercase;
   display: flex;
   justify-content: center;
 `,Hye=Jt.img`
-  max-height: 230px;
-  max-width: 375px;
+  max-height: 120px;
+  min-height: 120px;
+  max-width: 275px;
+  min-width: 275px;
   margin-bottom: 1rem;
 `,Yye=Jt.div`
   display: flex;

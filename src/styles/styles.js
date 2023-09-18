@@ -199,8 +199,8 @@ export const PdfStyles = StyleSheet.create({
     alignItems: 'center',
   },
   signaturedefaul: {
-    width: 300,
-    height: 100,
+    width: 275,
+    height: 120,
     objectFit: 'contain',
   },
   text: {
@@ -337,8 +337,10 @@ export const AssinaturaCampoImagem = styled.div`
   justify-content: center;
 `
 export const AssinaturaImagem = styled.img`
-  max-height: 230px;
-  max-width: 375px;
+  max-height: 120px;
+  min-height: 120px;
+  max-width: 275px;
+  min-width: 275px;
   margin-bottom: 1rem;
 `
 export const Horario = styled.div`
